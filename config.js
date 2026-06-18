@@ -5,7 +5,7 @@ window.LIFF_NOTICE_CONFIG = {
   // 在 LINE Developers Console 建立 LIFF 後，把 LIFF ID 貼在這裡。
   liffId: "2010438167-OVH1M2Hc",
 
-  companyName: "您的公司名稱",
+  companyName: "築藝彩色數位印刷",
   title: "端午節服務公告",
   period: "端午連假期間",
   message:
