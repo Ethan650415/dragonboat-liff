@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#123f35" />
+  <meta name="description" content="端午節客服服務公告" />
+  <title>端午節服務公告</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script defer src="./config.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <main class="page-shell" aria-live="polite">
+    <div class="decor decor--top" aria-hidden="true"></div>
+    <div class="decor decor--bottom" aria-hidden="true"></div>
+
+    <section id="noticeModal" class="modal-card" role="dialog" aria-modal="true" aria-labelledby="noticeTitle">
+      <div class="festival-badge" aria-hidden="true">端午安康</div>
+
+      <div class="illustration" aria-hidden="true">
+        <svg viewBox="0 0 260 145" role="img" aria-label="粽子與浪花插圖">
+          <defs>
+            <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5ebd78"/>
+              <stop offset="1" stop-color="#1e6c50"/>
+            </linearGradient>
+            <linearGradient id="leaf2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#8bd58d"/>
+              <stop offset="1" stop-color="#35835d"/>
+            </linearGradient>
+          </defs>
+
+          <path class="wave" d="M3 116c25-18 42-18 67 0s42 18 67 0 42-18 67 0 42 18 56 7v21H3z"/>
+          <path class="wave wave--light" d="M0 126c24-12 43-12 67 0s43 12 67 0 43-12 67 0 43 12 59 5v14H0z"/>
+
+          <g transform="translate(80 8)">
+            <path d="M50 8 104 104H-4z" fill="url(#leaf)" stroke="#174c3d" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M50 8 49 104" fill="none" stroke="#d3f2bb" stroke-width="4" opacity=".75"/>
+            <path d="M50 8 18 104M50 8l31 96" fill="none" stroke="#92ce8b" stroke-width="3" opacity=".75"/>
+            <path d="M3 77c28 11 65 11 94 0" fill="none" stroke="#f4c853" stroke-width="8" stroke-linecap="round"/>
+            <path d="M3 77c28 11 65 11 94 0" fill="none" stroke="#fff1a8" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="35" cy="63" r="3.5" fill="#153c33"/>
+            <circle cx="66" cy="63" r="3.5" fill="#153c33"/>
+            <path d="M41 76c6 6 13 6 19 0" fill="none" stroke="#153c33" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M7 83c-19 1-27 7-29 19" fill="none" stroke="#174c3d" stroke-width="4" stroke-linecap="round"/>
+            <path d="M94 83c19 1 27 7 29 19" fill="none" stroke="#174c3d" stroke-width="4" stroke-linecap="round"/>
+          </g>
+
+          <g transform="translate(22 48) rotate(-12)">
+            <path d="M28 0 55 50H0z" fill="url(#leaf2)" stroke="#174c3d" stroke-width="3"/>
+            <path d="M28 0 27 50M9 36c13 5 25 5 38 0" fill="none" stroke="#d5ecab" stroke-width="2"/>
+          </g>
+
+          <g transform="translate(194 46) rotate(12)">
+            <path d="M28 0 55 50H0z" fill="url(#leaf2)" stroke="#174c3d" stroke-width="3"/>
+            <path d="M28 0 27 50M9 36c13 5 25 5 38 0" fill="none" stroke="#d5ecab" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+
+      <p id="companyName" class="company-name">您的公司名稱</p>
+      <h1 id="noticeTitle">端午節服務公告</h1>
+      <p id="noticePeriod" class="notice-period">端午連假期間</p>
+
+      <div class="notice-copy">
+        <p id="noticeMessage">
+          客服回覆時間可能較平日延長，您仍可正常留言，我們將於恢復服務後依序回覆。
+        </p>
+        <p id="noticeResume" class="resume-text">
+          感謝您的理解與支持，祝您端午安康。
+        </p>
+      </div>
+
+      <div id="statusBox" class="status-box" hidden></div>
+
+      <div class="actions">
+        <button id="confirmButton" class="button button--primary" type="button">
+          我知道了
+        </button>
+        <button id="contactButton" class="button button--secondary" type="button" hidden>
+          聯絡客服
+        </button>
+      </div>
+
+      <p class="privacy-note">此頁面不會蒐集您的個人資料。</p>
+    </section>
+
+    <section id="closedState" class="closed-state" hidden>
+      <div class="closed-state__icon">✓</div>
+      <h2>公告已關閉</h2>
+      <p>您可以返回 LINE 繼續操作。</p>
+    </section>
+  </main>
+</body>
+</html>
