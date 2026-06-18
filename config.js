@@ -3,7 +3,7 @@
  */
 window.LIFF_NOTICE_CONFIG = {
   // 在 LINE Developers Console 建立 LIFF 後，把 LIFF ID 貼在這裡。
-  liffId: "YOUR_LIFF_ID",
+  liffId: "2010438167-OVH1M2Hc",
 
   companyName: "您的公司名稱",
   title: "端午節服務公告",
